@@ -49,9 +49,6 @@
                         <version>${project.version}</version>
                     </contractDependency>
                     <contractsPath>/</contractsPath>
-                    <!-- The contracts mode can't be classpath -->
-<!--                    <contractsRepositoryUsername>wangfengling</contractsRepositoryUsername>-->
-<!--                    <contractsRepositoryPassword>1317746707wang</contractsRepositoryPassword>-->
                     <contractsMode>REMOTE</contractsMode>
                 </configuration>
                 <executions>
@@ -63,37 +60,8 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <compilerVersion>${java.version}</compilerVersion>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
 
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>aliyun</id>
-            <name>Aliyun Maven Central Mirror</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
 </project>
